@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+{% block content%} {% endblock%}
+</body>
+</html>
+
+<h2 id="product">Product</h2>
+<section class="cards">
+    <div class="container">
+        <div class="row">
+            {% for product in products %}
+                <div class="col-lg-3 col-2 bg-danger">{{ product }}</div>
+            {% endfor %}
+        </div>
+        <div class="row">
+            {% for animal in animals %}
+                <div class="col-lg-3 col-2 bg-danger">{{ animal }}</div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
