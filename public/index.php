@@ -1,7 +1,7 @@
 <?php
 require '../vendor/autoload.php';
 
-$loader = new \Twig\Loader\FilesystemLoader('../src/View');
+$loader = new \Twig\Loader\FilesystemLoader(__DIR__ . '/../src/View');
 $twig = new \Twig\Environment($loader, [
     'cache' => false,
 ]);
@@ -9,10 +9,11 @@ $twig = new \Twig\Environment($loader, [
 
 $products = ['product1', 'product2', 'product3', 'product4', 'product5'];
 $animals = ['vache', 'chèvre', 'lion', 'belette', 'croco'];
-echo $twig->render('base.html.twig', [
+echo $twig->render('index.html.twig', [
     'products' => $products ,
     'animals' => $animals ,
 ]);
+
 
 
 
